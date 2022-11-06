@@ -1,0 +1,36 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/stylesheets/signup.css">
+<div class="full">
+<div class="row mb-3 signUpCard">
+    <h1 class="text-center">Sign Up</h1>
+    <div class="">
+        <form action="/register" method="POST" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label class="form-label" for="email">E-mail:</label>
+                <input class="form-control" type="email" id="email" name="email" autofocus required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="username">Username:</label>
+                <input class="form-control" type="text" id="username" name="username" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="password">Password:</label>
+                <input class="form-control" type="password" id="password" name="password" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="text-center">
+                <button style="width: calc(100%);" class="btn btn-success">Sign Up</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+</div>

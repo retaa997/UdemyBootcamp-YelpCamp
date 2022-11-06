@@ -1,0 +1,33 @@
+<% layout("layouts/boilerplate") %>
+<div class="row  mb-3">
+    <h1 class="text-center">Edit Campground</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds/<%= c._id %>?_method=PUT" method="POST" enctype="multipart/form-data" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label class="form-label" for="title">Campground Name:</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" value="<%= c.title %>" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location:</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" value="<%= c.location %>" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Campground Price:</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="campground[price]" value="<%= c.price %>" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description:</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]" required><%= c.description %></textarea>
+            </div>
+            <div class="text-center">
+                <button style="width: calc(100%);" class="btn btn-outline-info">Update Camground</button>
+            </div>
+        </form>
+        <div class="text-center">
+            <a style="width: calc(100%);" class="btn btn-outline-danger mt-1" href="/campgrounds/<%= c._id %>">Cancel</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/stylesheets/images.css">
+
+<div class="row  mb-3">
+    <h1 class="text-center mb-5">Manage Images for <%=c.title%></h1>
+    <div class="col-6">
+        <div class="mb-3">
+            <h4 class="text-center mb-5">Delete Selceted Images</h4>
+            <form action="/campgrounds/<%=c._id%>/manageImages?_method=DELETE" method="POST" enctype="multipart/form-data" novalidate class="needs-validation">
+                <div class="">
+                    
+                    <div class="imgContainer mb-3">
+                    
+                    <% for(let i = 0; i < c.images.length; i++) {%>
+                        <div class="d-flex flex-column justify-content-center mb-2">
+                            <img class="img" src="<%= c.images[i].url %>" alt="">
+                            <input type="checkbox" id="image-<%= i %>" name="deleteImages[]" value="<%= c.images[i].name %>">
+                        </div>
+                        
+                    <% } %> 
+                    </div>
+                    <button style="width: calc(99%/2);" class="btn btn-outline-primary">Delete</button>
+                    <a style="width: calc(99%/2);" class="btn btn-outline-danger" href="/campgrounds/<%=c._id%>">Cancel</a>
+                </div>
+                
+            </form> 
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="mb-3">
+            <h4 class="text-center mb-5">Add New Images</h4>
+            <form action="/campgrounds/<%=c._id%>/manageImages?_method=PUT" method="POST" enctype="multipart/form-data" novalidate class="needs-validation">  
+            
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="image" name="image" multiple>
+                    
+                </div>     
+                
+                <button style="width: calc(99%/2);" class="btn btn-outline-info">Add</button>
+                <a style="width: calc(99%/2);" class="btn btn-outline-danger" href="/campgrounds/<%=c._id%>">Cancel</a>
+                
+            </form>
+        </div>
+        
+    </div>
+</div>

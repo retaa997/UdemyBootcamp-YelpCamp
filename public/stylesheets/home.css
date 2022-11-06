@@ -1,0 +1,39 @@
+body{
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("https://static.wixstatic.com/media/fe95ff_2f43de40be184d6aa0f68d2b3b02a9b7~mv2.jpg/v1/fill/w_2500,h_1667,al_c/fe95ff_2f43de40be184d6aa0f68d2b3b02a9b7~mv2.jpg");
+    background-size: cover;
+    background-position: center;
+    text-shadow: 0 0.05rem 0.1rem rgba(0,0,0,0.5);
+    box-shadow: 0 0 5rem rgba(0,0,0,0.5);
+}
+.cover-container{
+    max-width: 60vw;
+}
+.nav-link{
+    padding: 0.25rem 0;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+.nav-link:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color: rgba(255,255,255,0.5);
+}
+.nav-link.active{
+    color: white;
+    border-bottom-color: white;
+}
+main .btn-secondary{
+    color: white;
+    font-weight: 400;
+    text-shadow: none;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    transition: all 1s linear;
+}
+main .btn-secondary:hover{
+    color: white;
+    font-weight: 400;
+    text-shadow: none;
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1));
+}

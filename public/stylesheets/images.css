@@ -1,0 +1,17 @@
+.imgContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img{
+    width: 90px;
+    height: 90px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    transition: all 200ms linear;
+}
+.img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

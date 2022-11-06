@@ -1,0 +1,44 @@
+<% layout("layouts/boilerplate") %>
+<div class="row mb-3">
+    <h1 class="text-center">New Campground</h1>
+    <div class="col-6 offset-3">
+        <form action="/campgrounds" method="POST" novalidate class="needs-validation" enctype='multipart/form-data'>
+            <div class="mb-3">
+                <label class="form-label" for="title">Campground Name:</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location:</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control" type="file" id="image" name="image" multiple>
+            </div> 
+            <!-- <div class="mb-3">
+                <label class="form-label" for="image">Image Url:</label>
+                <input class="form-control" type="text" id="image" name="campground[image]" required>
+            </div> -->
+            <div class="mb-3">
+                <label class="form-label" for="price">Campground Price:</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" placeholder="0.00" aria-label="price" aria-describedby="price-label" name="campground[price]" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description:</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+            </div>
+            <div class="text-center">
+                <button style="width: calc(100%);" class="btn btn-success">Add Camground</button>
+            </div>
+            
+        </form>
+        <div class="text-center">
+            <a style="width: calc(100%);" class="btn btn-danger mt-1" href="/campgrounds">Cancel</a>
+        </div>
+        
+    </div>
+</div>
+
+
